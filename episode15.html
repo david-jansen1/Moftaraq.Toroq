@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="https://i.top4top.io/p_3044bnhyn1.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>فادي TV</title>
+  <script type="text/javascript">
+    // تعطيل وضع المطور في Chrome
+    document.addEventListener('keydown', function(e) {
+        if (e.keyCode == 123) {
+            e.preventDefault();
+            return false;
+        }
+    });
+    </script>
+    <script type="text/javascript">
+        // تعطيل وضع المطور في Firefox
+        document.addEventListener('keydown', function(e) {
+            if (e.keyCode == 123) {
+                e.preventDefault();
+                return false;
+            }
+        });
+        </script>
+        <script type="text/javascript">
+            // تعطيل وضع المطور في Edge
+            document.addEventListener('keydown', function(e) {
+                if (e.keyCode == 123) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            </script>
+            <script type="text/javascript">
+                // منع قائمة السياق بواسطة تحديد الزر
+                document.addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+                
+                // منع قائمة السياق بواسطة التحكم بالمؤشر
+                document.onmousedown = function(e) {
+                    if (e.button == 2) {
+                        return false;
+                    }
+                };
+                </script>
+                <script type="text/javascript">
+                    // منع عرض مصدر الصفحة بالنقر بزر الماوس الأيمن
+                    document.addEventListener('contextmenu', function(e) {
+                        e.preventDefault();
+                    });
+                    
+                    // منع عرض مصدر الصفحة باستخدام الاختصارات للمفاتيح
+                    document.onkeydown = function(e) {
+                        if (e.ctrlKey && (e.keyCode === 83 || e.keyCode === 85 || e.keyCode === 117)) {
+                            e.preventDefault();
+                        }
+                    };
+                    
+                    // منع عرض مصدر الصفحة باستخدام "View Source" من قائمة المتصفح
+                    document.addEventListener('keydown', function(e) {
+                        if ((e.ctrlKey || e.metaKey) && (e.keyCode === 85 || e.keyCode === 83)) {
+                            e.preventDefault();
+                        }
+                    });
+                    </script>    
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #000000;
+      user-select: none;
+      margin: 0;
+      padding: 0;
+    }
+    .responsive-container {
+        position: relative;
+        width: calc(100% - 50px); /* العرض الكلي مع الهامش من الجانبين */
+        margin: 0 auto; /* لتوسيط العنصر */
+        padding-bottom: 56.25%; /* يمثل نسبة عرض الفيديو إلى ارتفاعه (9:16) */
+        height: 0;
+        overflow: hidden;
+        border: 4px solid orangered; /* تحديد الإطار بلون برتقالي */
+        border-radius: 8px; /* إضافة زوايا مستديرة للإطار */
+    }
+
+    .responsive-container iframe,
+    .responsive-container object,
+    .responsive-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .but{
+      font-size: 11px;
+      padding: 10px 7px;
+      width: 40%;
+      background: black; 
+      border-left: 6px solid orangered; 
+      border-right: 6px solid orangered; 
+      border-radius: 5px; 
+      border-top: none;
+      border-bottom: none; 
+      margin-bottom: 20px;
+      margin-left: 10px; 
+      text-align: center; 
+      color: white;
+    }
+    .butt{
+      font-size: 13px;
+      padding: 10px 10px;
+      width: 45%;
+      background: black; 
+      border-left: 6px solid orangered; 
+      border-right: 6px solid orangered; 
+      border-radius: 5px; 
+      border-top: none;
+      border-bottom: none; 
+      margin-bottom: 20px;
+      margin-left: 10px; 
+      text-align: center; 
+      color: white;
+    }
+    .but:active {
+            background-color: orangered;
+        }
+    .butt:hover {
+            background-color: orangered;
+        }
+
+
+    .str{
+      color: orangered; 
+      font-size: 13px;
+    }
+    .str:hover{
+      color: orangered; 
+      color: #fff
+    }
+
+
+
+    .container {
+            margin: auto;
+            width: var(--container-width)
+        }
+
+
+        a {
+            text-decoration: none;
+            color: #dcdcdc
+        }
+
+
+
+        .hoverable {
+            overflow: hidden;
+            z-index: 1
+        }
+
+        .hoverable:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+            right: 0;
+            width: 5px;
+            height: 5px;
+            background: #ffffff1c;
+            transform-origin: center;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: 0s all ease
+        }
+
+        .hoverable:hover:after {
+            transform: scale(200);
+            opacity: 0;
+            transition: 1s all ease
+        }
+
+        .episodes-list {}
+
+        .episodes-list .loading2 {
+            text-align: center
+        }
+
+        .episodes-list a {
+            display: inline-block;
+            background: #2b2b2a;
+            margin: 4px;
+            border-radius: 2px;
+            text-align: center;
+            color: #fff;
+            height: 88px;
+            position: relative;
+            width: 101px;
+            transition: .2s all ease;
+            border-radius: 5px
+        }
+
+        .episodes-list a i {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            line-height: 100px;
+            color: #fff;
+            font-size: 60px;
+            opacity: 0
+        }
+
+        .episodes-list a strong {
+            display: block;
+            line-height: 40px;
+            font-size: 35px;
+            font-weight: 700
+        }
+
+        .episodes-list a span {
+            font-size: 17px;
+            display: block;
+            color: chocolate;
+            line-height: 27px;
+            padding-top: 9px
+        }
+        .link{
+      color: orangered;
+      text-decoration: none;
+      font-size:15px 
+    }
+  </style>      
+</head>
+<body>
+  <br><br>
+    <div style="display: flex; justify-content: center; align-items: center; height: 448px;">
+    <img src="https://w27.my-cima.net/uploads/articles/5766be69.jpeg" style="width: 302px; height: 448px;" alt="refrech">
+    </div>
+    <br><br>
+    <h1 style="color: white; user-select: none; font-size: 17px;">مسلسل مفترق طرق الحلقة 15 الخامسة عشر</h1><br><br>
+    <button class="but"><strong class="str">النوع : ‌ ‌ </strong>دراما  ‌ ‌ . ‌ ‌  ﺗﺸﻮﻳﻖ ﻭﺇﺛﺎﺭﺓ</button>
+    <button class="but"><strong class="str">تقييم المسلسل : ‌ ‌ </strong>7.1 ‌ نجوم</button>
+    <button class="but"><strong class="str">سنة الاصدار : ‌ ‌ </strong>2024</button>
+    <button class="but"><strong class="str">التصنيف الرقابي: ‌ ‌ </strong>+12</button>
+   <center><p style="font-size:15px ;font-weight: bold; background: black; border-left: 10px solid orangered; border-right: 5px solid orangered; border-radius: 5px; border-top: none; margin-bottom: 20px; padding: 10px; text-align: center; color: white; width: 90%; user-select: none;"><i style="color: orangered; font-size: 20px; user-select: none;"><strong>قصة المسلسل : ‌ ‌ </strong></i> تدور أحداث المسلسل حول أميرة تجد نفسها في مفترق الطرق بعد القبض على زوجها المحافظ عمر في قضايا مخلة بالشرف، فتقرر العودة إلى مهنة المحاماة، حتى تتمكن من إعالة أسرتها، ويساندها صديقها القديم المحامي يحيى</p></center>
+   <center><p style="font-size:15px ;font-weight: bold; background: black; border-left: 10px solid orangered; border-right: 5px solid orangered; border-radius: 5px; border-top: none; margin-bottom: 20px; padding: 10px; text-align: center; color: white; width: 90%; user-select: none; "><i style="color: orangered; font-size: 20px; user-select: none;"><strong>طاقم العمل : ‌ ‌ </strong></i> هند صبري  ‌ ‌ . ‌ ‌ إياد نصار  ‌ ‌ . ‌ ‌  ماجد المصري  ‌ ‌ . ‌ ‌  علي الطيب  ‌ ‌ . ‌ ‌  جومانا مراد  ‌ ‌ . ‌ ‌  هدى المفتي  ‌ ‌ . ‌ ‌  <a href="https://david-jansen1.github.io/series.crew/" class="link">والمزيد ‌ ‌ </a></p></p></center> 
+   <br><br>
+   <div>
+    </div>  
+<br><br><br><br>
+    <div class="responsive-container">
+        <iframe src="https://vk.com/video_ext.php?oid=720493913&id=456239509&hash=fadytv" frameborder="0" allowfullscreen></iframe>
+    </div><br><br>
+    <!-- <a href="episode16.html"><button class="butt"><strong class="str">الحلقة التالية ‌ ‌ </strong>16</button></a> -->
+    <a href="episode14.html"><button class="butt"><strong class="str">الحلقة السابقة ‌ ‌ </strong>14</button></a>
+    <div class="container">
+
+
+        <center><h1 style=" font-family: Arial, sans-serif; font-size: 40px; border-radius: 6px; background-color: orangered; color: white; width: 90%;">الحلقات</h1><br><br></center>
+      
+        <br><br><div class="epispodes-container container">
+            <div class="flex-1 episodes-list">
+      <a class="hoverable" href="index.html"><span>حلقة</span><strong>1</strong></a>
+      <a class="hoverable" href="episode2.html"><span>حلقة</span><strong>2</strong></a>
+      <a class="hoverable" href="episode3.html"><span>حلقة</span><strong>3</strong></a>
+      <a class="hoverable" href="episode4.html"><span>حلقة</span><strong>4</strong></a>
+      <a class="hoverable" href="episode5.html"><span>حلقة</span><strong>5</strong></a>
+      <a class="hoverable" href="episode6.html"><span>حلقة</span><strong>6</strong></a>
+      <a class="hoverable" href="episode7.html"><span>حلقة</span><strong>7</strong></a>
+      <a class="hoverable" href="episode8.html"><span>حلقة</span><strong>8</strong></a>
+      <a class="hoverable" href="episode9.html"><span>حلقة</span><strong>9</strong></a>
+      <a class="hoverable" href="episode10.html"><span>حلقة</span><strong>10</strong></a>
+      <a class="hoverable" href="episode11.html"><span>حلقة</span><strong>11</strong></a>
+      <a class="hoverable" href="episode12.html"><span>حلقة</span><strong>12</strong></a>
+      <a class="hoverable" href="episode13.html"><span>حلقة</span><strong>13</strong></a>
+      <a class="hoverable" href="episode14.html"><span>حلقة</span><strong>14</strong></a>
+      <a class="hoverable" href="episode15.html"><span>حلقة</span><strong>15</strong></a>
+      <!-- <a class="hoverable" href="episode16.html"><span>حلقة</span><strong>16</strong></a>
+      <a class="hoverable" href="episode17.html"><span>حلقة</span><strong>17</strong></a>
+      <a class="hoverable" href="episode18.html"><span>حلقة</span><strong>18</strong></a>
+      <a class="hoverable" href="episode19.html"><span>حلقة</span><strong>19</strong></a>
+      <a class="hoverable" href="episode20.html"><span>حلقة</span><strong>20</strong></a> -->
+    </div>
+</body>
+</html>
