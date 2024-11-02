@@ -1,169 +1,102 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
+
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" href="https://i.top4top.io/p_3044bnhyn1.png"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>فادي TV</title>
-  <script type="text/javascript">
-    // تعطيل وضع المطور في Chrome
-    document.addEventListener('keydown', function(e) {
-        if (e.keyCode == 123) {
-            e.preventDefault();
-            return false;
-        }
-    });
-    </script>
-    <script type="text/javascript">
-        // تعطيل وضع المطور في Firefox
-        document.addEventListener('keydown', function(e) {
-            if (e.keyCode == 123) {
-                e.preventDefault();
-                return false;
-            }
-        });
-        </script>
-        <script type="text/javascript">
-            // تعطيل وضع المطور في Edge
-            document.addEventListener('keydown', function(e) {
-                if (e.keyCode == 123) {
-                    e.preventDefault();
-                    return false;
-                }
-            });
-            </script>
-            <script type="text/javascript">
-                // منع قائمة السياق بواسطة تحديد الزر
-                document.addEventListener('contextmenu', function(e) {
-                    e.preventDefault();
-                    return false;
-                });
-                
-                // منع قائمة السياق بواسطة التحكم بالمؤشر
-                document.onmousedown = function(e) {
-                    if (e.button == 2) {
-                        return false;
-                    }
-                };
-                </script>
-                <script type="text/javascript">
-                    // منع عرض مصدر الصفحة بالنقر بزر الماوس الأيمن
-                    document.addEventListener('contextmenu', function(e) {
-                        e.preventDefault();
-                    });
-                    
-                    // منع عرض مصدر الصفحة باستخدام الاختصارات للمفاتيح
-                    document.onkeydown = function(e) {
-                        if (e.ctrlKey && (e.keyCode === 83 || e.keyCode === 85 || e.keyCode === 117)) {
-                            e.preventDefault();
-                        }
-                    };
-                    
-                    // منع عرض مصدر الصفحة باستخدام "View Source" من قائمة المتصفح
-                    document.addEventListener('keydown', function(e) {
-                        if ((e.ctrlKey || e.metaKey) && (e.keyCode === 85 || e.keyCode === 83)) {
-                            e.preventDefault();
-                        }
-                    });
-                    </script>    
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #000000;
-      user-select: none;
-      margin: 0;
-      padding: 0;
-    }
-    .responsive-container {
-        position: relative;
-        width: calc(100% - 50px); /* العرض الكلي مع الهامش من الجانبين */
-        margin: 0 auto; /* لتوسيط العنصر */
-        padding-bottom: 56.25%; /* يمثل نسبة عرض الفيديو إلى ارتفاعه (9:16) */
-        height: 0;
-        overflow: hidden;
-        border: 4px solid orangered; /* تحديد الإطار بلون برتقالي */
-        border-radius: 8px; /* إضافة زوايا مستديرة للإطار */
-    }
-
-    .responsive-container iframe,
-    .responsive-container object,
-    .responsive-container embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-    .but{
-      font-size: 11px;
-      padding: 10px 7px;
-      width: 40%;
-      background: black; 
-      border-left: 6px solid orangered; 
-      border-right: 6px solid orangered; 
-      border-radius: 5px; 
-      border-top: none;
-      border-bottom: none; 
-      margin-bottom: 20px;
-      margin-left: 10px; 
-      text-align: center; 
-      color: white;
-    }
-    .butt{
-      font-size: 13px;
-      padding: 10px 10px;
-      width: 45%;
-      background: black; 
-      border-left: 6px solid orangered; 
-      border-right: 6px solid orangered; 
-      border-radius: 5px; 
-      border-top: none;
-      border-bottom: none; 
-      margin-bottom: 20px;
-      margin-left: 10px; 
-      text-align: center; 
-      color: white;
-    }
-    .but:active {
-            background-color: orangered;
-        }
-    .butt:hover {
-            background-color: orangered;
+    <meta charset="UTF-8" />
+    <link rel="icon" href="https://i.top4top.io/p_3044bnhyn1.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+                sans-serif;
+            text-align: center;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
         }
 
+        .responsive-container {
+            position: relative;
+            width: calc(100% - 1px);
+            margin: 0 auto;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border: 4px solid orangered;
+            border-radius: 8px;
+        }
 
-    .str{
-      color: orangered; 
-      font-size: 13px;
-    }
-    .str:hover{
-      color: orangered; 
-      color: #fff
-    }
+        .responsive-container iframe,
+        .responsive-container object,
+        .responsive-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
+        .but {
+            font-size: 14px;
+            padding: 10px 7px;
+            width: 46%;
+            background: black;
+            border-left: 6px solid orangered;
+            border-right: 6px solid orangered;
+            border-radius: 5px;
+            border-top: none;
+            border-bottom: none;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            text-align: center;
+            color: white;
+        }
 
+        .butt{
+            display: block;
+            font-size: 13px;
+            padding: 15px 10px;
+            width: 45%;
+            background: black; 
+            border-left: 6px solid orangered; 
+            border-right: 6px solid orangered; 
+            border-radius: 5px; 
+            border-top: none;
+            border-bottom: none;
+            margin-top: 35px; 
+            margin-bottom: 45px;
+            margin-left: 10px; 
+            text-align: center; 
+            color: white;
+        }
+        .str {
+            color: orangered;
+            font-size: 16px;
+        }
+        .strr {
+            color: orangered;
+            font-size: 12px;
+        }
 
-    .container {
+        .container {
             margin: auto;
-            width: var(--container-width)
+            width: var(--container-width);
         }
-
 
         a {
             text-decoration: none;
-            color: #dcdcdc
+            color: #dcdcdc;
         }
-
-
 
         .hoverable {
             overflow: hidden;
-            z-index: 1
+            z-index: 1;
         }
 
         .hoverable:after {
-            content: '';
+            content: "";
             position: absolute;
             bottom: 0;
             z-index: -1;
@@ -174,19 +107,19 @@
             transform-origin: center;
             border-radius: 50%;
             transform: scale(0);
-            transition: 0s all ease
+            transition: 0s all ease;
         }
 
         .hoverable:hover:after {
             transform: scale(200);
             opacity: 0;
-            transition: 1s all ease
+            transition: 1s all ease;
         }
 
         .episodes-list {}
 
         .episodes-list .loading2 {
-            text-align: center
+            text-align: center;
         }
 
         .episodes-list a {
@@ -199,8 +132,8 @@
             height: 88px;
             position: relative;
             width: 101px;
-            transition: .2s all ease;
-            border-radius: 5px
+            transition: 0.2s all ease;
+            border-radius: 5px;
         }
 
         .episodes-list a i {
@@ -212,14 +145,14 @@
             line-height: 100px;
             color: #fff;
             font-size: 60px;
-            opacity: 0
+            opacity: 0;
         }
 
         .episodes-list a strong {
             display: block;
             line-height: 40px;
             font-size: 35px;
-            font-weight: 700
+            font-weight: 700;
         }
 
         .episodes-list a span {
@@ -227,64 +160,351 @@
             display: block;
             color: chocolate;
             line-height: 27px;
-            padding-top: 9px
+            padding-top: 9px;
         }
-            .link{
-      color: orangered;
-      text-decoration: none;
-      font-size:15px 
-    }
-  </style>      
+
+        .link {
+            color: orangered;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .seriesimage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 448px;
+            margin-top: 45px;
+            margin-bottom: 45px;
+        }
+
+        .seriesimage img {
+            width: 302px;
+            height: 448px;
+        }
+
+        .container h1 {
+            color: white;
+            margin-bottom: 45px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 26px;
+        }
+
+        .seriesStory,
+        .castList {
+            font-size: 15px;
+            font-weight: bold;
+            background: black;
+            border-width: 0 7px;
+            border-style: none solid;
+            border-color: transparent orangered;
+            border-radius: 5px;
+            margin: 40px 0;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            width: 100%;
+        }
+
+        .seriesStory i,
+        .castList i {
+            color: orangered;
+            font-size: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            background: #000;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            user-select: none;
+            padding-right: 25px;
+            padding-left: 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            text-align: center;
+        }
+
+        .card img {
+            padding: 3px;
+            width: 100%;
+            height: 100%;
+            border-radius: 7px;
+        }
+
+        .notice-text {
+            background: #000;
+            border: 5px solid black;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px / 1 FontAwesome;
+            font-size: 14px;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            color: orangered;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        .num{
+            color: white;
+            text-align: center;
+        }
+        .epi{
+            font-size: 35px; 
+            border-radius: 6px; 
+            background-color: orangered; color: white; 
+            width: 90%;
+            padding: 10px 0;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const commonData = {
+                image: "https://i.ibb.co/FhctMXq/5766be69.jpg",
+                genre: "ﺩﺭاﻣﺎ ‌ ‌ . ‌ ‌  ﺗﺸﻮﻳﻖ ﻭﺇﺛﺎﺭﺓ",
+                classification: "الاول",
+                rating: "6.2 ‌ ‌نجوم",
+                year: "2024",
+                story: "تجد أميرة نفسها في مفترق الطرق؛ بعد القبض على زوجها المحافظ عمر في قضايا مخلة بالشرف، فتقرر العودة إلى مهنة المحاماة، حتى تتمكن من إعالة أسرتها، ويساندها صديقها القديم المحامي يحيى.",
+                cast: [
+                    "هند صبري",
+                    "إياد نصار",
+                    "ماجد المصري",
+                    "علي الطيب",
+                    "جومانا مراد",
+                    "هدى المفتي",
+                ],
+                moreLink: "https://david-jansen1.github.io/series.crew/",
+            };
+
+            const seriesData = {
+                "1": {
+                    title: "مسلسل مفترق طرق الحلقة 1",
+                    videoSrc: "https://vk.com/video_ext.php?oid=720493913&id=456239362&hash=fadytv-episode1",
+                },
+                "2": {
+                    title: "مسلسل مفترق طرق الحلقة 2",
+                    videoSrc: "https://vk.com/video_ext.php?oid=720493913&id=456239363&hash=fadytv-episode2",
+                },
+                "3": {
+                    title: "مسلسل مفترق طرق الحلقة 3",
+                    videoSrc: "https://vk.com/video_ext.php?oid=720493913&id=456239366&hash=fadytv-episode3",
+                },
+                "4": {
+                    title: "مسلسل مفترق طرق الحلقة 4",
+                    videoSrc: "https://vk.com/video_ext.php?oid=720493913&id=456239368&hash=fadytv-episode4",
+                },
+                "5": {
+                    title: "مسلسل مفترق طرق الحلقة 5",
+                    videoSrc: "https://vk.com/video_ext.php?oid=720493913&id=456239380&hash=fadytv-episode5",
+                },
+                "6": {
+                    title: "مسلسل مفترق طرق الحلقة 6",
+                    videoSrc: "https://vk.com/video_ext.php?oid=720493913&id=456239448&hash=fadytv-episode6",
+                },
+                "7": {
+                    title: "مسلسل مفترق طرق الحلقة 7",
+                    videoSrc: "https://vk.com/video_ext.php?oid=720493913&id=456239451&hash=fadytv-episode7",
+                },
+                "8": {
+                    title: "مسلسل مفترق طرق الحلقة 8",
+                    videoSrc: "https://vk.com/video_ext.php?oid=757563422&id=456241418&hash=fadytv-episode8",
+                },
+                "9": {
+                    title: "مسلسل مفترق طرق الحلقة 9",
+                    videoSrc: "https://vk.com/video_ext.php?oid=720493913&id=456239457&hash=fadytv-episode9",
+                },
+                "10": {
+                    title: "مسلسل مفترق طرق الحلقة 10",
+                    videoSrc: "https://vk.com/video_ext.php?oid=720493913&id=456239474&hash=fadytv-episode10",
+                },
+                "11": {
+                    title: "مسلسل مفترق طرق الحلقة 11",
+                    videoSrc: "https://vk.com/video_ext.php?oid=720493913&id=456239485&hash=fadytv-episode11",
+                },
+                "12": {
+                    title: "مسلسل مفترق طرق الحلقة 12",
+                    videoSrc: "https://vk.com/video_ext.php?oid=720493913&id=456239489&hash=fadytv-episode12",
+                },
+                "13": {
+                    title: "مسلسل مفترق طرق الحلقة 13",
+                    videoSrc: "https://vk.com/video_ext.php?oid=720493913&id=456239491&hash=fadytv-episode13",
+                },
+                "14": {
+                    title: "مسلسل مفترق طرق الحلقة 14",
+                    videoSrc: "https://vk.com/video_ext.php?oid=720493913&id=456239505&hash=fadytv-episode14",
+                },
+                "15": {
+                    title: "مسلسل مفترق طرق الحلقة 15",
+                    videoSrc: "https://vk.com/video_ext.php?oid=720493913&id=456239509&hash=fadytv-episode15",
+                },
+                
+                
+                // يمكنك إضافة المزيد من الحلقات هنا
+            };
+
+            // استرجاع الحلقة الحالية من localStorage
+            let currentEpisode = parseInt(localStorage.getItem('currentEpisode')) || 1;
+
+            function loadEpisode(episodeNumber) {
+                const episodeData = seriesData[episodeNumber];
+                if (episodeData) {
+                    currentEpisode = episodeNumber;
+                    localStorage.setItem('currentEpisode', currentEpisode); // حفظ الحلقة في localStorage
+                    document.getElementById("seriesImage").src = commonData.image;
+                    document.getElementById("seriesTitle").innerText = episodeData.title;
+                    document.getElementById("seriesGenre").innerText = commonData.genre;
+                    document.getElementById("seriesClassification").innerText = commonData.classification;
+                    document.getElementById("seriesRating").innerText = commonData.rating;
+                    document.getElementById("seriesYear").innerText = commonData.year;
+                    document.getElementById("seriesStory").innerText = commonData.story;
+                    document.getElementById("videoIframe").src = episodeData.videoSrc;
+
+                    // عرض طاقم العمل
+                    const castList = document.getElementById("castList");
+                    castList.innerHTML = ""; // قم بتفريغ القائمة أولاً
+                    commonData.cast.forEach((member) => {
+                        castList.innerHTML += member + " ‌ ‌ . ‌ ‌ ";
+                    });
+
+                    // إظهار رابط "والمزيد"
+                    const moreLink = document.getElementById("moreLink");
+                    moreLink.href = commonData.moreLink;
+                    moreLink.style.display = "inline";
+
+                    updateNavigationButtons();
+                }
+            }
+
+            function updateNavigationButtons() {
+                const prevButton = document.getElementById('prevEpisode');
+                const nextButton = document.getElementById('nextEpisode');
+
+                // تحديث زر الحلقة السابقة
+                if (currentEpisode > 1) {
+                    prevButton.style.display = 'inline'; // إظهار الزر
+                    prevButton.innerHTML = `<i class="fa fa-chevron-circle-right"></i> <strong class="strr">الحلقة السابقة ‌ <span class="num">${currentEpisode - 1}</span></strong>`;
+                    prevButton.onclick = function() {
+                        loadEpisode(currentEpisode - 1);
+                    };
+                } else {
+                    prevButton.style.display = 'none'; // إخفاء الزر إذا لم يكن موجودًا
+                }
+
+                // تحديث زر الحلقة التالية
+                if (seriesData[currentEpisode + 1]) {
+                    nextButton.style.display = 'inline'; // إظهار الزر
+                    nextButton.innerHTML = `<strong class="strr">الحلقة التالية ‌ <span class="num">${currentEpisode + 1}</span></strong> <i class="fa fa-chevron-circle-left"></i>`;
+                    nextButton.onclick = function() {
+                        loadEpisode(currentEpisode + 1);
+                    };
+                } else {
+                    nextButton.style.display = 'none'; // إخفاء الزر إذا لم يكن موجودًا
+                }
+            }
+
+            // تحميل الحلقة الحالية عند بدء التحميل
+            loadEpisode(currentEpisode);
+
+            // إضافة أحداث النقر على الحلقات
+            const episodeLinks = document.querySelectorAll(".episodes-list a");
+            episodeLinks.forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const episodeNumber = this.getAttribute("data-episode");
+                    loadEpisode(episodeNumber);
+                });
+            });
+        });
+    </script>
 </head>
+
 <body>
-  <br><br>
-    <div style="display: flex; justify-content: center; align-items: center; height: 448px;">
-    <img src="https://w27.my-cima.net/uploads/articles/5766be69.jpeg" style="width: 302px; height: 448px;" alt="refrech">
+    <div class="seriesimage">
+        <img id="seriesImage" />
+    </div>
+
+    <div class="container">
+        <h1 id="seriesTitle"></h1>
+        <button class="but">
+            <strong class="str">النوع</strong><br><br><span id="seriesGenre"></span>
+        </button>
+        <button class="but">
+            <strong class="str">تقييم المسلسل</strong><br><br><span id="seriesRating"></span>
+        </button>
+        <button class="but">
+            <strong class="str">سنة الاصدار</strong><br><br><span id="seriesYear"></span>
+        </button>
+        <button class="but">
+            <strong class="str">الموسم</strong><br><br><span id="seriesClassification"></span>
+        </button>
+        <div class="paragraph">
+            <p class="seriesStory">
+                <i><strong>قصة المسلسل</strong><br><br></i><span id="seriesStory"></span>
+            </p>
+            <p class="castList">
+                <i><strong>طاقم العمل</strong><br><br></i><span id="castList"></span><a id="moreLink" class="link"
+                    href="#" style="display: none">والمزيد</a>
+            </p>
+        </div>
+        <div class="responsive-container">
+            <iframe id="videoIframe" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
     <br><br>
-    <h1 style="color: white; user-select: none; font-size: 17px;">مسلسل مفترق طرق الحلقة 1 الاولى</h1><br><br>
-    <button class="but"><strong class="str">النوع : ‌ ‌ </strong>دراما . ﺗﺸﻮﻳﻖ ﻭﺇﺛﺎﺭﺓ</button>
-    <button class="but"><strong class="str">تقييم المسلسل : ‌ ‌ </strong>7.1 نجوم</button>
-    <button class="but"><strong class="str">سنة الاصدار : ‌ ‌ </strong>2024</button>
-    <button class="but"><strong class="str">التصنيف الرقابي: ‌ ‌ </strong>+12</button>
-   <center><p style="font-size:15px ;font-weight: bold; background: black; border-left: 10px solid orangered; border-right: 5px solid orangered; border-radius: 5px; border-top: none; margin-bottom: 20px; padding: 10px; text-align: center; color: white; width: 90%; user-select: none;"><i style="color: orangered; font-size: 20px; user-select: none;"><strong>قصة المسلسل : ‌ ‌ </strong></i> تدور أحداث المسلسل حول أميرة تجد نفسها في مفترق الطرق بعد القبض على زوجها المحافظ عمر في قضايا مخلة بالشرف، فتقرر العودة إلى مهنة المحاماة، حتى تتمكن من إعالة أسرتها، ويساندها صديقها القديم المحامي يحيى</p></center>
-   <center><p style="font-size:15px ;font-weight: bold; background: black; border-left: 10px solid orangered; border-right: 5px solid orangered; border-radius: 5px; border-top: none; margin-bottom: 20px; padding: 10px; text-align: center; color: white; width: 90%; user-select: none; "><i style="color: orangered; font-size: 20px; user-select: none;"><strong>طاقم العمل : ‌ ‌ </strong></i> هند صبري  ‌ ‌ . ‌ ‌ إياد نصار  ‌ ‌ . ‌ ‌  ماجد المصري  ‌ ‌ . ‌ ‌  علي الطيب  ‌ ‌ . ‌ ‌  جومانا مراد  ‌ ‌ . ‌ ‌  هدى المفتي  ‌ ‌ . ‌ ‌  <a href="https://david-jansen1.github.io/series.crew/" class="link">والمزيد ‌ ‌ </a></p></p></center> 
-   <br><br>
-   <div>
-    </div>  
-<br><br><br><br>
-    <div class="responsive-container">
-        <iframe src="https://vk.com/video_ext.php?oid=720493913&id=456239362&hash=fadytv" frameborder="0" allowfullscreen></iframe>
-    </div><br><br>
-    <a href="episode2.html"><button class="butt"><strong class="str">الحلقة التالية ‌ ‌ </strong>2</button></a>
-    <!-- <a href="index.html"><button class="butt"><strong class="str">الحلقة السابقة ‌ ‌ </strong> 1</button></a> -->
-    <div class="container">
-
-
-        <center><h1 style=" font-family: Arial, sans-serif; font-size: 40px; border-radius: 6px; background-color: orangered; color: white; width: 90%;">الحلقات</h1><br><br></center>
-      
-        <br><br><div class="epispodes-container container">
-            <div class="flex-1 episodes-list">
-      <a class="hoverable" href="index.html"><span>حلقة</span><strong>1</strong></a>
-      <a class="hoverable" href="episode2.html"><span>حلقة</span><strong>2</strong></a>
-      <a class="hoverable" href="episode3.html"><span>حلقة</span><strong>3</strong></a>
-      <a class="hoverable" href="episode4.html"><span>حلقة</span><strong>4</strong></a>
-      <a class="hoverable" href="episode5.html"><span>حلقة</span><strong>5</strong></a>
-      <a class="hoverable" href="episode6.html"><span>حلقة</span><strong>6</strong></a>
-      <a class="hoverable" href="episode7.html"><span>حلقة</span><strong>7</strong></a>
-      <a class="hoverable" href="episode8.html"><span>حلقة</span><strong>8</strong></a>
-      <a class="hoverable" href="episode9.html"><span>حلقة</span><strong>9</strong></a>
-      <a class="hoverable" href="episode10.html"><span>حلقة</span><strong>10</strong></a>
-      <a class="hoverable" href="episode11.html"><span>حلقة</span><strong>11</strong></a>
-      <a class="hoverable" href="episode12.html"><span>حلقة</span><strong>12</strong></a>
-      <a class="hoverable" href="episode13.html"><span>حلقة</span><strong>13</strong></a>
-      <a class="hoverable" href="episode14.html"><span>حلقة</span><strong>14</strong></a>
-      <a class="hoverable" href="episode15.html"><span>حلقة</span><strong>15</strong></a>
-      <!-- <a class="hoverable" href="episode16.html"><span>حلقة</span><strong>16</strong></a>
-      <a class="hoverable" href="episode17.html"><span>حلقة</span><strong>17</strong></a>
-      <a class="hoverable" href="episode18.html"><span>حلقة</span><strong>18</strong></a>
-      <a class="hoverable" href="episode19.html"><span>حلقة</span><strong>19</strong></a>
-      <a class="hoverable" href="episode20.html"><span>حلقة</span><strong>20</strong></a> -->
+    <div >
+        <button id="prevEpisode" class="butt" style="display:none;">
+            <strong class="strr">الحلقة السابقة</strong>
+        </button>
+        <button id="nextEpisode" class="butt" style="display:none;">
+            <strong class="strr">الحلقة التالية</strong>
+        </button>
+    </div>
+    <center><h1 class="epi">الحلقات</h1><br><br></center>
+    <div class="episodes-list" dir="ltr">
+        <a class="hoverable" href="#" data-episode="1"><span>حلقة</span><strong>1</strong></a>
+        <a class="hoverable" href="#" data-episode="2"><span>حلقة</span><strong>2</strong></a>
+        <a class="hoverable" href="#" data-episode="3"><span>حلقة</span><strong>3</strong></a>
+        <a class="hoverable" href="#" data-episode="4"><span>حلقة</span><strong>4</strong></a>
+        <a class="hoverable" href="#" data-episode="5"><span>حلقة</span><strong>5</strong></a>
+        <a class="hoverable" href="#" data-episode="6"><span>حلقة</span><strong>6</strong></a>
+        <a class="hoverable" href="#" data-episode="7"><span>حلقة</span><strong>7</strong></a>
+        <a class="hoverable" href="#" data-episode="8"><span>حلقة</span><strong>8</strong></a>
+        <a class="hoverable" href="#" data-episode="9"><span>حلقة</span><strong>9</strong></a>
+        <a class="hoverable" href="#" data-episode="10"><span>حلقة</span><strong>10</strong></a>
+        <a class="hoverable" href="#" data-episode="11"><span>حلقة</span><strong>11</strong></a>
+        <a class="hoverable" href="#" data-episode="12"><span>حلقة</span><strong>12</strong></a>
+        <a class="hoverable" href="#" data-episode="13"><span>حلقة</span><strong>13</strong></a>
+        <a class="hoverable" href="#" data-episode="14"><span>حلقة</span><strong>14</strong></a>
+        <a class="hoverable" href="#" data-episode="15"><span>حلقة</span><strong>15</strong></a>
+        <!-- أضف المزيد من الحلقات هنا -->
     </div>
 </body>
+
 </html>
